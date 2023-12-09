@@ -1,0 +1,49 @@
+<div>
+
+    <form #userForm="ngForm" (ngSubmit)="insertarData(userForm.value)">
+        <input type="text" ngModel name="nombre" placeholder="Ingrese el personaje">
+        <br><br>
+        <input type="text" ngModel name="alias" placeholder="Ingrese el alias">
+        <br><br>
+        <input type="text" ngModel name="ocupacion" placeholder="Ingrese la ocupacion">
+        <br><br>
+        <input type="text" ngModel name="edad" placeholder="Ingrese la edad">
+        <br><br>
+        <input type="text" ngModel name="cumpleanos" placeholder="Ingrese el cumpleaños">
+        <br><br>
+        <input type="text" ngModel name="debut" placeholder="Ingrese el debut">
+        <br><br>
+        <button>Add new </button>
+    </form>
+
+
+
+    <!-- Area de la tabla -->
+
+    <table class="table"  *ngFor="let item of data">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Alias</th>
+            <th scope="col">Ocupación</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Cumpleaños</th>
+            <th scope="col">Apariciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>{{item.nombre}}</td>
+            <td>{{item.alias}}</td>
+            <td>{{item.ocupacion}}</td>
+            <td>{{item.edad}}</td>
+            <td>{{item.cumpleanos}}</td>
+            <td>{{item.debut}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+</div>
